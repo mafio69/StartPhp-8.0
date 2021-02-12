@@ -1,0 +1,6 @@
+/logs/access.log
+/logs/error.log
+/app/composer.lock
+/app/xdebug/xdebug.log
+/app/.php_cs.cache
+/app/logs/xdebug.log
