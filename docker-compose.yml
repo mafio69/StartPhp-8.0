@@ -55,7 +55,6 @@ services:
             - php-fpm
         ports:
             - "8055:80"
-            - "2222:21"
         container_name: cakeServer
 
 #    redis:

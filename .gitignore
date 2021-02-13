@@ -4,3 +4,5 @@
 /app/xdebug/xdebug.log
 /app/.php_cs.cache
 /app/logs/xdebug.log
+/app/logs/xdebug22.log
+/app/logs/xdebug.log

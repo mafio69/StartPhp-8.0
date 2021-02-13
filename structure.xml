@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tree>
+  <directory name="project">
+    <directory name="app">
+      <file name="composer.json"></file>
+      <file name="composer.lock"></file>
+      <directory name="logs">
+        .....
+      </directory>
+      <directory name="public">
+        <file name="index.php"></file>
+      </directory>
+      <directory name="src">
+        <directory name="logs"></directory>
+        <file name="Test.php"></file>
+      </directory>
+      <directory name="vendor">
+        .......
+      </directory>
+      <directory name="docker">
+        <directory name="db">
+          <file name="Dockerfile"></file>
+          <file name="init.sql"></file>
+        </directory>
+        <directory name="nginx">
+          <directory name="conf.d">
+            <file name="default.conf"></file>
+          </directory>
+          <file name="Dockerfile"></file>
+          <file name="nginx.conf"></file>
+          <file name="php.ini"></file>
+          <directory name="sites">
+            <file name="default.conf"></file>
+          </directory>
+          <file name="supervisord-web.conf"></file>
+        </directory>
+        <directory name="php">
+          <file name="conf.d"></file>
+          <file name="Dockerfile"></file>
+          <directory name="ini">
+            <file name="custom.ini"></file>
+          </directory>
+          <file name="php.ini"></file>
+          <file name="supervisord-app.conf"></file>
+          <file name="wait-for-it.sh"></file>
+        </directory>
+        <directory name="redis">
+          <file name="Dockerfile"></file>
+          <file name="init.sh"></file>
+          <file name="redis.conf"></file>
+        </directory>
+      </directory>
+      <file name="docker-compose.yml"></file>
+      <directory name="logs">
+        <file name="access.log"></file>
+        <file name="error.log"></file>
+        <directory name="xdebug"></directory>
+      </directory>
+      <file name="structure.xml"></file>
+      <file name="README.md"></file>
+    </directory>
+  </directory>
+</tree>

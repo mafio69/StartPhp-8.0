@@ -32,6 +32,12 @@ RUN apk --update add wget \
   libgsasl-dev \
   supervisor
 
+ENV ALPINE_MIRROR "http://dl-cdn.alpinelinux.org/alpine"
+RUN echo "${ALPINE_MIRROR}/edge/main" >> /etc/apk/repositories
+RUN apk add --no-cache nodejs-current  --repository="http://dl-cdn.alpinelinux.org/alpine/edge/community"
+RUN node --version
+
+
 RUN docker-php-ext-install mysqli pdo pdo_mysql tokenizer xml
 
 RUN rm /var/cache/apk/*
@@ -40,7 +46,6 @@ ENV GROUP_ID=1000 \
     USER_ID=1000
 ENV USER=docker
 RUN addgroup "docker"
-
 
 RUN adduser \
     --disabled-password \
@@ -53,6 +58,5 @@ RUN adduser \
 COPY supervisord-app.conf /etc/supervisord.conf
 
 WORKDIR /app
-RUN chown "$USER":docker -R /app
 
 EXPOSE 9000
