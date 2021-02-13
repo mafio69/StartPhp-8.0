@@ -14,7 +14,7 @@ services:
             - MYSQL_ROOT_PASSWORD=docker
         container_name: cakeDb
         ports:
-            - "3301:3306"
+            - "3303:3306"
 
     php-fpm:
         build:
